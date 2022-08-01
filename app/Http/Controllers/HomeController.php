@@ -32,4 +32,14 @@ class HomeController extends Controller
         //return view('home',compact('userData2'));
         return view('home',$data);
     }
+
+    public function stuff_manage(){
+        $userData = DB::table('users')->where('email','sawebsoft@gmail.com')->first();
+        $data['userData2'] = User::where('email','sawebsoft@gmail.com')->first();
+        return view('StuffManage',$data);
+    }
+
+    public function stuff_store(Request $request){
+        dd($request->all());
+    }
 }
