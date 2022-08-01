@@ -24,3 +24,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/stuff-manage', [App\Http\Controllers\HomeController::class, 'stuff_manage'])->name('stuff-manage');
+Route::post('/stuff-store', [App\Http\Controllers\HomeController::class, 'stuff_store'])->name('stuff-manage');
